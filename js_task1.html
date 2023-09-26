@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056a0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Reverse a Number</h1>
+        <label for="numberInput">Enter a Number:</label>
+        <input type="number" id="numberInput">
+        <button onclick="reverseNumber()">Reverse</button>
+    </div>
+
+    <script>
+        function reverseNumber() {
+            const numberInput = document.getElementById('numberInput').value;
+            
+            // Check if the input is a valid number
+            if (!isNaN(numberInput)) {
+                const reversedNumber = parseFloat(numberInput.toString().split('').reverse().join(''));
+                showPopup(`Reversed Number: ${reversedNumber}`);
+            } else {
+                showPopup('Please enter a valid number.');
+            }
+        }
+
+        function showPopup(message) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = message;
+            document.body.appendChild(popup);
+
+            setTimeout(function() {
+                popup.remove();
+            }, 3000); // Remove the popup after 3 seconds
+        }
+    </script>
+</body>
+</html>

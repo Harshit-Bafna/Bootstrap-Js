@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Display</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        #container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #0056a0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Date and Time Display</h1>
+        <button onclick="showDate()">Show Today's Date</button>
+        <br>
+        <button onclick="showTime()">Show Current Time</button>
+    </div>
+
+    <script>
+        function showDate() {
+            const currentDate = new Date().toLocaleDateString();
+            showPopup(`Today's Date: ${currentDate}`);
+        }
+
+        function showTime() {
+            const currentTime = new Date().toLocaleTimeString();
+            showPopup(`Current Time: ${currentTime}`);
+        }
+
+        function showPopup(message) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = message;
+            document.body.appendChild(popup);
+
+            setTimeout(function() {
+                popup.remove();
+            }, 3000); // Remove the popup after 3 seconds
+        }
+    </script>
+</body>
+</html>

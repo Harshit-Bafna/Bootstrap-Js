@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .navbar {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .space {
+            margin: 0px 10px;
+        }
+
+        .text {
+            margin: 70px 0px;
+            text-align: center;
+        }
+
+        .title {
+            margin-bottom: 25px;
+        }
+
+        .card-container {
+            margin: 70px 0px;
+            text-align: center;
+        }
+
+        .card {
+            display: inline-block;
+            width: 250px;
+            margin: 0px 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .card-title {
+            font-size: 35px;
+        }
+
+        .card-title span {
+            font-size: 25px;
+            color: grey;
+        }
+
+        footer {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        footer .col-4,
+        .col-8 {
+            padding: 50px;
+        }
+
+        footer img {
+            width: 50px;
+            height: 50px;
+        }
+
+        footer .footer-title{
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid d-flex justify-content-between">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#">Company Name</a>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item space">
+                    <a class="nav-link active" aria-current="page" href="#">Feature</a>
+                </li>
+                <li class="nav-item space">
+                    <a class="nav-link active" aria-current="page" href="#">Enterprise</a>
+                </li>
+                <li class="nav-item space">
+                    <a class="nav-link active" aria-current="page" href="#">Support</a>
+                </li>
+                <li class="nav-item space">
+                    <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+                </li>
+                <li class="nav-item space">
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text">
+        <h1 class="title">
+            Pricing
+        </h1>
+        <p class="content">
+            Quickly build an effective pricing table for your potential customers with this <br>
+            Bootstrap example. It's built with default Bootstrap components and utilities <br>
+            with little customization.
+        </p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h5 class="card-header">Free</h5>
+            <div class="card-body">
+                <h5 class="card-title">$0 <span>/ mo</span></h5>
+                <p class="card-text">
+                    10 users included <br>
+                    2 Gb of storage <br>
+                    Email support <br>
+                    Help centre access
+                </p>
+                <a href="#" class="btn btn-outline-primary">Sign Up For Free</a>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">Pro</h5>
+            <div class="card-body">
+                <h5 class="card-title">$15 <span>/ mo</span></h5>
+                <p class="card-text">
+                    20 users included <br>
+                    10 Gb of storage <br>
+                    Email support <br>
+                    Help centre access
+                </p>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">Enterprise</h5>
+            <div class="card-body">
+                <h5 class="card-title">$29 <span>/ mo</span></h5>
+                <p class="card-text">
+                    30 users included <br>
+                    15 Gb of storage <br>
+                    Email support <br>
+                    Help centre access
+                </p>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container m-0" style="max-width: 100%;">
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://img.freepik.com/premium-vector/bootstrap-icon-b-letter-logo_781017-7.jpg" alt="">
+                    <p>© 2023</p>
+                </div>
+                <div class="col-8">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <p class="footer-title">Features</p>
+                                <p>
+                                    Cool-Stuff <br>
+                                    Random Features <br>
+                                    Team Features <br>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="footer-title">Resources</p>
+                                <p>
+                                    Resource <br>
+                                    Resource Name <br>
+                                    Another Resources <br>
+                                </p>
+                            </div>
+                            <div class="col">
+                                <p class="footer-title">About</p>
+                                <p>
+                                    Team <br>
+                                    Loaction <br>
+                                    Privacy <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</html>

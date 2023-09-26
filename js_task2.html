@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Letters in Alphabetic Order</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056a0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Sort Letters in Alphabetic Order</h1>
+        <label for="stringInput">Enter a String:</label>
+        <input type="text" id="stringInput">
+        <button onclick="sortString()">Sort</button>
+    </div>
+
+    <script>
+        function sortString() {
+            const stringInput = document.getElementById('stringInput').value;
+            const sortedString = stringInput.split('').sort().join('');
+            showPopup(`Sorted String: ${sortedString}`);
+        }
+
+        function showPopup(message) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = message;
+            document.body.appendChild(popup);
+
+            setTimeout(function() {
+                popup.remove();
+            }, 3000); // Remove the popup after 3 seconds
+        }
+    </script>
+</body>
+</html>

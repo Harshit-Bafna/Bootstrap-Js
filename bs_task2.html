@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body{
+            margin-bottom: 100px;
+        }
+
+        .nav-container {
+            padding: 20px 100px;
+            padding-bottom: 0px;
+            background-color: rgb(159, 219, 38);
+        }
+
+        .title {
+            font-size: 40px;
+            text-decoration: none;
+            color: black;
+            font-weight: 750;
+        }
+
+        .secondary-container {
+            padding: 0px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .nav-content {
+            font-size: 12px;
+        }
+
+        .navbar {
+            margin-top: 15px;
+        }
+
+        .nav-item button {
+            right: 0;
+            position: absolute;
+            margin-right: 20px;
+        }
+
+        .header-image {
+            height: 500px;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+            opacity: 0.8;
+        }
+
+        .img-container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: relative;
+        }
+
+        .img-content {
+            position: absolute;
+            bottom: 40%;
+            right: 33%;
+            text-align: center;
+        }
+
+        .line-1 {
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .line-2 {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .img-container button {
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .card-container .col-4{
+            padding: 50px 50px;
+        }
+
+        .card-container .card-img-1{
+            float: left;
+            color: rgb(159, 219, 38);
+            height: 100%;
+            margin-right: 40px;
+        }
+
+        .card-container .card-2{
+            background-color: rgb(159, 219, 38);
+        }
+
+        .card-container .card-img-2{
+            float: left;
+            color: black;
+            height: 100%;
+            margin-right: 40px;
+        }
+
+        .card-container .card-content-1{
+            color: rgb(159, 219, 38);
+        }
+
+        .card-container .card-content-2{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container nav-container m-0" style="max-width: 100%;">
+        <div class="row">
+            <div class="col-5 align-self-center">
+                <a href="#" class="title">Builderz</a>
+            </div>
+            <div class="col-7 align-self-center">
+                <div class="container secondary-container">
+                    <div class="row">
+                        <div class="col-1 align-self-center">
+                            <i class="fa-solid fa-calendar-days fa-2xl"></i>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <p class="nav-content-heading">Opening Hour</p>
+                            <p class="nav-content">Mon - Fri, 8:00 - 9:00</p>
+                        </div>
+
+                        <div class="col-1 align-self-center">
+                            <i class="fa-solid fa-phone fa-2xl"></i>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <p class="nav-content-heading">Call Us</p>
+                            <p class="nav-content">+012 345 6789</p>
+                        </div>
+
+                        <div class="col-1 align-self-center">
+                            <i class="fa-solid fa-envelope fa-2xl"></i>
+                        </div>
+                        <div class="col-3 align-self-center">
+                            <p class="nav-content-heading">Email Us</p>
+                            <p class="nav-content">info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Project</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-light">Get a Quote</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="img-container">
+        <img class="header-image"
+            src="https://images.squarespace-cdn.com/content/v1/588635e63e00be43ba3b75c0/1554210410065-X0C3S9HYWPXHGPVZ9B2A/April_2019.jpeg?format=1500w"
+            alt="">
+        <div class="img-content">
+            <p class="line-1">We Are Professional</p>
+            <p class="line-2">For Your Dream Project</p>
+            <button type="button" class="btn btn-outline-light">Get a Quote</button>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="container m-0" style="max-width: 100%;">
+            <div class="row ">
+                <div class="col-4 bg-dark">
+                    <div class="card-img-1">
+                        <i class="fa-solid fa-user-gear fa-2xl"></i>
+                    </div>
+                    <div class="card-content-1">
+                        <h5>Expert Worker</h5>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard
+                    </div>
+                </div>
+
+                <div class="col-4 card-2">
+                    <div class="card-img-2">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="card-content-2">
+                        <h5>Quality Work</h5>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text 
+                    </div>
+                </div>
+
+                <div class="col-4 bg-dark">
+                    <div class="card-img-1">
+                        <i class="fa-solid fa-phone fa-2xl"></i>
+                    </div>
+                    <div class="card-content-1">
+                        <h5>24|7 Support</h5>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/9826566aa1.js" crossorigin="anonymous"></script>
+
+</html>

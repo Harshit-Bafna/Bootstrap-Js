@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            flex: 1;
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="number"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group select {
+            width: 100%;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            flex: 2;
+            margin-right: 0px;
+            margin-bottom: 0;
+            /* Remove bottom margin */
+        }
+
+        .form-group .checkbox-label {
+            flex: 4;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="re-enter-password">Re-enter Password</label>
+                <input type="password" id="re-enter-password" name="re-enter-password" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required><label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state" required>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <!-- Include all states of India here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" value="India" readonly>
+            </div>
+            <div class="form-group">
+                <label>Languages known</label>
+                <input type="checkbox" id="english" name="languages" value="English"><label
+                    for="english">English</label>
+                <input type="checkbox" id="kannada" name="languages" value="Kannada"><label
+                    for="kannada">Kannada</label>
+                <input type="checkbox" id="hindi" name="languages" value="Hindi"><label for="hindi">Hindi</label>
+                <input type="checkbox" id="telugu" name="languages" value="Telugu"><label for="telugu">Telugu</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="declaration" name="declaration" required>
+                <label class="checkbox-label" for="declaration">Hereby I declare all the given details are true</label>
+            </div>
+            <div class="form-group">
+                <a href="#" id="ethnus-link">Login to Ethnus website</a>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="submit-btn">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registration-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get form fields by their IDs
+            var firstName = document.getElementById("first-name").value;
+            var lastName = document.getElementById("last-name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var reEnterPassword = document.getElementById("re-enter-password").value;
+            var age = document.getElementById("age").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+            var declaration = document.getElementById("declaration").checked;
+
+            // Validation logic
+            if (firstName.trim() === "") {
+                alert("Please enter your First Name");
+                return;
+            }
+            if (lastName.trim() === "") {
+                alert("Please enter your Last Name");
+                return;
+            }
+            if (email.trim() === "") {
+                alert("Please enter your Email");
+                return;
+            }
+            // Add more validation for email format if needed
+            if (password.trim() === "") {
+                alert("Please enter a Password");
+                return;
+            }
+            if (password !== reEnterPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+            if (age < 18) {
+                alert("You must be at least 18 years old to register");
+                return;
+            }
+            if (phone.trim() === "") {
+                alert("Please enter your Phone Number");
+                return;
+            }
+            if (address.trim() === "") {
+                alert("Please enter your Address");
+                return;
+            }
+            if (!declaration) {
+                alert("You must agree to the declaration");
+                return;
+            }
+
+            // If all validation passes, you can submit the form
+            alert("Registration successful");
+            // You can also submit the form programmatically here if needed
+            // document.getElementById("registration-form").submit();
+        });
+    </script>
+
+</body>
+
+</html>
